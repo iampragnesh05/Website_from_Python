@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pragnesh Shrimal - Web Developer</title>
+
+    <!-- Bulma CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700&display=swap" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar mt-6" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="{{ url_for('home') }}" class="logo navbar-item">iampragnesh</a>
+            </div>
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <a href="{{ url_for('resume') }}" class="navbar-item is-size-5-mobile" id="resume">Resume</a>
+                </div>
+                <div class="buttons navbar-item">
+                    <a href="{{ url_for('contact') }}" class="button btn-color is-rounded is-outlined is-size-6-mobile">
+                        Say Hello
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero is-white has-text-centered">
+        <div class="hero-body">
+            <div class="container">
+                <div class="columns is-centered">
+                    <div class="column">
+                        <h1 class="title is-spaced is-size-1-dekstop is-size-2-tablet-is-size-3-mobile">
+                            Web Developer
+                        </h1>
+                        <h2 class="sub-heading m-2 is-size-4">
+                            A Brown Skinny Guy with nothing more than passion, a laptop, and a dream.
+                        </h2>
+                        <img class="hero-img" src="{{ url_for('static', filename='Images/Untitled-1.png') }}" alt="Hero Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-foot">
+            <div class="container">
+                <img class="foot-img" src="{{ url_for('static', filename='Images/hero.svg') }}" alt="Hero Background">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section is-medium is-primary has-text-centered">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-three-fifth">
+                    <h1 class="title has-text-white is-spaced is-size-desktop is-size-4-mobile">
+                        Hi, I'm Pragnesh. Nice to meet you.
+                    </h1>
+                    <h2 class="subtitle has-text-white is-size-5">
+                        Entrepreneurship is another dream of mine because I am not a person of the dress code, and I want to travel around the world. Like a little boy, I always dreamed that a hurricane would take me somewhere to another country.
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills has-text-centered">
+        <div class="container">
+            <div class="box">
+                <div class="content">
+                    <div class="column">
+                        <figure class="image">
+                            <img src="{{ url_for('static', filename='Images/frontend.svg') }}" alt="Web Development Icon" class="icon">
+                        </figure>
+                        <h1 id="main-title" class="title is-size-4 is-spaced">
+                            Web Developer
+                        </h1>
+                        <p>
+                            I like to code things from scratch and enjoy bringing ideas to life in the browser.
+                        </p>
+                        <p class="list-title has-text-css has-text-weight-normal">
+                            Languages I Speak:
+                        </p>
+                        <p>
+                            HTML, CSS, JavaScript
+                        </p>
+                        <p class="list-title has-text-css has-text-weight-normal">
+                            Dev Tools:
+                        </p>
+                        <ul>
+                            <li>VS Code</li>
+                            <li>Bootstrap</li>
+                            <li>Bulma</li>
+                            <li>GitHub</li>
+                            <li>WordPress</li>
+                            <li>Terminal</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Callout Section -->
+    <section class="call-out mt-5 mb-5">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column">
+                    <h1 class="title is-spaced">
+                        Interested in collaborating or investing?
+                    </h1>
+                    <h2 class="subtitle is-size-5-desktop is-size-4-mobile">
+                        I’m always open to discussing web development work or partnership opportunities.
+                    </h2>
+                    <a href="resume.html" class="button is-link is-outlined is-rounded is-medium m-2">
+                        Check My Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="content has-text-centered has-text-white">
+            <p>
+                <a href="#" class="navbar-brand has-text-white is-size-3 footer-logo">iampragnesh</a>
+                <h2 class="has-text-white is-size-4 text-centered">
+                    Explore, Dream, & Discover.
+                </h2>
+                <div class="social-icon">
+                    <div class="field">
+                        <a href="https://twitter.com/Ipragnesh05" class="button is-medium is-rounded m-2">
+                            <span class="icon is-small">
+                                <i class="fab fa-twitter"></i>
+                            </span>
+                        </a>
+                        <a href="https://www.facebook.com/pragnesh.shrimal.3" class="button is-medium is-rounded m-2">
+                            <span class="icon is-small">
+                                <i class="fab fa-facebook-f"></i>
+                            </span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/pragnesh-shrimal-572a20190/" class="button is-medium is-rounded m-2">
+                            <span class="icon is-small">
+                                <i class="fab fa-linkedin-in"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </p>
+            <div class="copyright has-text-centered has-text-white">
+                "Handcrafted by Me"
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

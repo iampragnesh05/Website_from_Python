@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Page</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/contact.css') }}">
+
+    <!-- Bulma CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <section class="section">
+        <div class="container">
+            <a href="{{ url_for('home') }}" class="navbar-brand has-text-black is-size-3">
+                iampragnesh05
+            </a>
+        </div>
+
+        <!-- Weather Button and Popup -->
+        <div class="navbar-end" id="btn">
+            <div class="navbar-item">
+                <div class="buttons">
+                    <a class="button is-primary">
+                        <strong>Current Weather</strong>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Weather Popup -->
+        <div class="popup">
+            <div class="popup-inner container">
+                <section class="top-banner">
+                    <div class="container">
+                        <span class="close">&times;</span>
+                        <h1 class="heading">Weather App</h1>
+                        <form>
+                            <input type="text" placeholder="Search for a city" autofocus>
+                            <button type="submit">SUBMIT</button>
+                            <span class="msg"></span>
+                        </form>
+                    </div>
+                </section>
+                <section class="ajax-section">
+                    <div class="container">
+                        <ul class="cities"></ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="section">
+        <div class="is-form-page animate-fadeUp">
+            <section class="is-white has-text-centered">
+                <div class="container">
+                    <div class="columns is-centered">
+                        <div class="column is-three-quarters">
+                            <img class="avatar" src="{{ url_for('static', filename='Images/Untitled-1.png') }}" alt="Avatar">
+                            <h1 class="title is-spaced is-size-2-desktop is-size-2-tablet is-size-3-mobile has-text-weight-light m-2">
+                                Thanks for taking the time to reach out. How can I help you today?
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Form Fields -->
+            <section class="section">
+                <div class="container">
+                    <form method="POST" action="{{ url_for('contact') }}">
+                        <div class="field">
+                            <label class="label">Name</label>
+                            <div class="control">
+                                <input class="input" type="text" placeholder="Your Name" name="name" required>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">Username</label>
+                            <div class="control has-icons-left has-icons-right">
+                                <input class="input is-success" type="text" placeholder="Your Username" name="username" required>
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-user"></i>
+                                </span>
+                                <span class="icon is-small is-right">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                            </div>
+                            <p class="help is-success">This username is available</p>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">Email</label>
+                            <div class="control has-icons-left has-icons-right">
+                                <input class="input is-danger" type="email" placeholder="Your Email" name="email" required>
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-envelope"></i>
+                                </span>
+                                <span class="icon is-small is-right">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                </span>
+                            </div>
+                            <p class="help is-danger">Please provide a valid email.</p>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">Message</label>
+                            <div class="control">
+                                <textarea class="textarea" placeholder="Your Message" name="message" required></textarea>
+                            </div>
+                        </div>
+
+                        <div class="field is-grouped">
+                            <div class="control">
+                                <button class="button is-link is-rounded">Submit</button>
+                            </div>
+                            <div class="control">
+                                <button class="button is-link is-light">Cancel</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!-- Optional JavaScript -->
+    <script src="{{ url_for('static', filename='JavaScript/contact.js') }}"></script>
+    <script src="{{ url_for('static', filename='JavaScript/app.js') }}"></script>
+
+  </body>
+</html>
